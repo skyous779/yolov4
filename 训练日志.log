@@ -1,0 +1,2266 @@
+2022-12-20 14:35:45,620:INFO:Args:
+2022-12-20 14:35:45,620:INFO:--> enable_modelarts: False
+2022-12-20 14:35:45,620:INFO:--> data_url: 
+2022-12-20 14:35:45,620:INFO:--> train_url: 
+2022-12-20 14:35:45,620:INFO:--> checkpoint_url: 
+2022-12-20 14:35:45,620:INFO:--> data_path: /home/ma-user/work/mycoco
+2022-12-20 14:35:45,620:INFO:--> output_path: /home/ma-user/work/coco2017/train
+2022-12-20 14:35:45,620:INFO:--> load_path: /home/ma-user/work/coco2017/checkpoint_path
+2022-12-20 14:35:45,620:INFO:--> device_target: Ascend
+2022-12-20 14:35:45,621:INFO:--> need_modelarts_dataset_unzip: True
+2022-12-20 14:35:45,621:INFO:--> modelarts_dataset_unzip_name: coco
+2022-12-20 14:35:45,621:INFO:--> data_dir: /home/ma-user/work/mycoco
+2022-12-20 14:35:45,621:INFO:--> per_batch_size: 8
+2022-12-20 14:35:45,621:INFO:--> pretrained_backbone: 
+2022-12-20 14:35:45,621:INFO:--> resume_yolov4: 
+2022-12-20 14:35:45,621:INFO:--> pretrained_checkpoint: /home/ma-user/work/coco2017/checkpoint_path/yolov4_ascend_v170_coco2017_official_cv_acc44.ckpt
+2022-12-20 14:35:45,621:INFO:--> filter_weight: False
+2022-12-20 14:35:45,621:INFO:--> lr_scheduler: cosine_annealing
+2022-12-20 14:35:45,621:INFO:--> lr: 0.012
+2022-12-20 14:35:45,621:INFO:--> lr_epochs: [220, 250]
+2022-12-20 14:35:45,621:INFO:--> lr_gamma: 0.1
+2022-12-20 14:35:45,622:INFO:--> eta_min: 0.0
+2022-12-20 14:35:45,622:INFO:--> t_max: 320
+2022-12-20 14:35:45,622:INFO:--> max_epoch: 320
+2022-12-20 14:35:45,622:INFO:--> warmup_epochs: 20
+2022-12-20 14:35:45,622:INFO:--> weight_decay: 0.0005
+2022-12-20 14:35:45,622:INFO:--> momentum: 0.9
+2022-12-20 14:35:45,622:INFO:--> loss_scale: 64
+2022-12-20 14:35:45,622:INFO:--> label_smooth: 0
+2022-12-20 14:35:45,622:INFO:--> label_smooth_factor: 0.1
+2022-12-20 14:35:45,622:INFO:--> log_interval: 100
+2022-12-20 14:35:45,622:INFO:--> ckpt_path: outputs/
+2022-12-20 14:35:45,622:INFO:--> ckpt_interval: -1
+2022-12-20 14:35:45,623:INFO:--> is_save_on_master: 1
+2022-12-20 14:35:45,623:INFO:--> is_distributed: 1
+2022-12-20 14:35:45,623:INFO:--> rank: 0
+2022-12-20 14:35:45,623:INFO:--> group_size: 1
+2022-12-20 14:35:45,623:INFO:--> need_profiler: 0
+2022-12-20 14:35:45,623:INFO:--> training_shape: 
+2022-12-20 14:35:45,623:INFO:--> run_eval: True
+2022-12-20 14:35:45,623:INFO:--> save_best_ckpt: True
+2022-12-20 14:35:45,623:INFO:--> eval_start_epoch: 200
+2022-12-20 14:35:45,623:INFO:--> eval_interval: 1
+2022-12-20 14:35:45,623:INFO:--> ann_file: 
+2022-12-20 14:35:45,623:INFO:--> transfer_train: False
+2022-12-20 14:35:45,624:INFO:--> pretrained: ./outputs/2022-12-18_time_23_30_13/ckpt_0/best_map.ckpt
+2022-12-20 14:35:45,624:INFO:--> log_path: outputs/
+2022-12-20 14:35:45,624:INFO:--> ann_val_file: /home/ma-user/work/mycoco/annotations/val.json
+2022-12-20 14:35:45,624:INFO:--> test_nms_thresh: 0.45
+2022-12-20 14:35:45,624:INFO:--> test_ignore_threshold: 0.001
+2022-12-20 14:35:45,624:INFO:--> device_id: 0
+2022-12-20 14:35:45,624:INFO:--> batch_size: 2
+2022-12-20 14:35:45,624:INFO:--> testing_shape: 608
+2022-12-20 14:35:45,624:INFO:--> ckpt_file: 
+2022-12-20 14:35:45,624:INFO:--> file_name: yolov4
+2022-12-20 14:35:45,624:INFO:--> file_format: MINDIR
+2022-12-20 14:35:45,624:INFO:--> keep_detect: True
+2022-12-20 14:35:45,625:INFO:--> hue: 0.1
+2022-12-20 14:35:45,625:INFO:--> saturation: 1.5
+2022-12-20 14:35:45,625:INFO:--> value: 1.5
+2022-12-20 14:35:45,625:INFO:--> jitter: 0.3
+2022-12-20 14:35:45,625:INFO:--> resize_rate: 10
+2022-12-20 14:35:45,625:INFO:--> multi_scale: [[416, 416], [448, 448], [480, 480], [512, 512], [544, 544], [576, 576], [608, 608], [640, 640], [672, 672], [704, 704], [736, 736]]
+2022-12-20 14:35:45,625:INFO:--> max_box: 90
+2022-12-20 14:35:45,625:INFO:--> backbone_input_shape: [32, 64, 128, 256, 512]
+2022-12-20 14:35:45,625:INFO:--> backbone_shape: [64, 128, 256, 512, 1024]
+2022-12-20 14:35:45,625:INFO:--> backbone_layers: [1, 2, 8, 8, 4]
+2022-12-20 14:35:45,625:INFO:--> ignore_threshold: 0.7
+2022-12-20 14:35:45,626:INFO:--> eval_ignore_threshold: 0.001
+2022-12-20 14:35:45,626:INFO:--> nms_thresh: 0.5
+2022-12-20 14:35:45,626:INFO:--> each_multiscale: True
+2022-12-20 14:35:45,626:INFO:--> mosaic: True
+2022-12-20 14:35:45,626:INFO:--> multi_label: False
+2022-12-20 14:35:45,626:INFO:--> multi_label_thresh: 0.2
+2022-12-20 14:35:45,626:INFO:--> detect_head_loss_coff: [1, 1, 1]
+2022-12-20 14:35:45,626:INFO:--> bbox_class_loss_coff: [10, 1, 1]
+2022-12-20 14:35:45,626:INFO:--> anchor_scales: [[12, 16], [19, 36], [40, 28], [36, 75], [76, 55], [72, 146], [142, 110], [192, 243], [459, 401]]
+2022-12-20 14:35:45,626:INFO:--> test_img_shape: [608, 608]
+2022-12-20 14:35:45,626:INFO:--> labels: ['no_mask', 'yes_mask']
+2022-12-20 14:35:45,626:INFO:--> checkpoint_filter_list: ['feature_map.backblock0.conv6.weight', 'feature_map.backblock0.conv6.bias', 'feature_map.backblock1.conv6.weight', 'feature_map.backblock1.conv6.bias', 'feature_map.backblock2.conv6.weight', 'feature_map.backblock2.conv6.bias', 'feature_map.backblock3.conv6.weight', 'feature_map.backblock3.conv6.bias']
+2022-12-20 14:35:45,627:INFO:--> img_id_file_path: 
+2022-12-20 14:35:45,627:INFO:--> result_files: ./result_Files
+2022-12-20 14:35:45,627:INFO:--> config_path: /home/ma-user/work/yolov4_folk/model_utils/../default_config.yaml
+2022-12-20 14:35:45,627:INFO:--> num_classes: 2
+2022-12-20 14:35:45,627:INFO:--> out_channel: 21
+2022-12-20 14:35:45,627:INFO:--> data_root: /home/ma-user/work/mycoco/train_coco
+2022-12-20 14:35:45,627:INFO:--> annFile: /home/ma-user/work/mycoco/annotations/train.json
+2022-12-20 14:35:45,627:INFO:--> data_val_root: /home/ma-user/work/mycoco/val_coco
+2022-12-20 14:35:45,627:INFO:--> rank_save_ckpt_flag: 1
+2022-12-20 14:35:45,627:INFO:--> outputs_dir: outputs/2022-12-20_time_14_35_45
+2022-12-20 14:35:45,627:INFO:--> logger: <LOGGER yolov4_cspdarknet53 (NOTSET)>
+2022-12-20 14:35:45,627:INFO:
+2022-12-20 14:35:50,541:INFO:Finish loading dataset
+2022-12-20 14:35:51,711:INFO:Not load pre-trained backbone, please be careful
+2022-12-20 14:35:51,743:INFO:finish get network
+2022-12-20 14:52:17,060:INFO:epoch[3], iter[99], loss:1325.944938, per step time: 9845.90 ms, fps: 0.81, lr:0.0023076923098415136
+2022-12-20 14:55:03,665:INFO:epoch[7], iter[199], loss:292.660530, per step time: 1666.04 ms, fps: 4.80, lr:0.004615384619683027
+2022-12-20 14:59:55,674:INFO:epoch[11], iter[299], loss:262.816406, per step time: 2920.08 ms, fps: 2.74, lr:0.006923076696693897
+2022-12-20 15:02:40,811:INFO:epoch[15], iter[399], loss:269.879966, per step time: 1651.36 ms, fps: 4.84, lr:0.009230769239366055
+2022-12-20 15:03:16,668:INFO:epoch[19], iter[499], loss:261.473377, per step time: 358.56 ms, fps: 22.31, lr:0.011538461782038212
+2022-12-20 15:03:51,675:INFO:epoch[23], iter[599], loss:257.434276, per step time: 350.06 ms, fps: 22.85, lr:0.01184768881648779
+2022-12-20 15:04:22,610:INFO:epoch[26], iter[699], loss:231.499352, per step time: 309.35 ms, fps: 25.86, lr:0.011805594898760319
+2022-12-20 15:05:02,821:INFO:epoch[30], iter[799], loss:231.969445, per step time: 402.10 ms, fps: 19.90, lr:0.011741641908884048
+2022-12-20 15:05:35,609:INFO:epoch[34], iter[899], loss:218.311099, per step time: 327.88 ms, fps: 24.40, lr:0.011668836697936058
+2022-12-20 15:06:12,925:INFO:epoch[38], iter[999], loss:214.962530, per step time: 373.15 ms, fps: 21.44, lr:0.011587289161980152
+2022-12-20 15:06:49,069:INFO:epoch[42], iter[1099], loss:214.700721, per step time: 361.43 ms, fps: 22.13, lr:0.011497127823531628
+2022-12-20 15:07:23,548:INFO:epoch[46], iter[1199], loss:206.718593, per step time: 344.78 ms, fps: 23.20, lr:0.011398489587008953
+2022-12-20 15:08:00,622:INFO:epoch[50], iter[1299], loss:210.880810, per step time: 370.74 ms, fps: 21.58, lr:0.011319039389491081
+2022-12-20 15:08:34,204:INFO:epoch[53], iter[1399], loss:199.142353, per step time: 335.81 ms, fps: 23.82, lr:0.011205942369997501
+2022-12-20 15:09:15,846:INFO:epoch[57], iter[1499], loss:194.742838, per step time: 416.41 ms, fps: 19.21, lr:0.011084817349910736
+2022-12-20 15:09:49,070:INFO:epoch[61], iter[1599], loss:185.983050, per step time: 332.23 ms, fps: 24.08, lr:0.010955852456390858
+2022-12-20 15:10:26,202:INFO:epoch[65], iter[1699], loss:182.711732, per step time: 371.32 ms, fps: 21.54, lr:0.010819245129823685
+2022-12-20 15:11:03,883:INFO:epoch[69], iter[1799], loss:186.809754, per step time: 376.80 ms, fps: 21.23, lr:0.01067520771175623
+2022-12-20 15:11:41,096:INFO:epoch[73], iter[1899], loss:182.487230, per step time: 372.12 ms, fps: 21.50, lr:0.010523960925638676
+2022-12-20 15:12:14,246:INFO:epoch[76], iter[1999], loss:170.597930, per step time: 331.46 ms, fps: 24.14, lr:0.01040593534708023
+2022-12-20 15:12:54,370:INFO:epoch[80], iter[2099], loss:184.507335, per step time: 401.23 ms, fps: 19.94, lr:0.010242640972137451
+2022-12-20 15:13:30,151:INFO:epoch[84], iter[2199], loss:175.175214, per step time: 357.80 ms, fps: 22.36, lr:0.010072804056107998
+2022-12-20 15:14:07,399:INFO:epoch[88], iter[2299], loss:158.452091, per step time: 372.46 ms, fps: 21.48, lr:0.009896688163280487
+2022-12-20 15:14:46,092:INFO:epoch[92], iter[2399], loss:166.676157, per step time: 386.93 ms, fps: 20.68, lr:0.009714563377201557
+2022-12-20 15:15:26,446:INFO:epoch[96], iter[2499], loss:171.089739, per step time: 403.53 ms, fps: 19.83, lr:0.009526711888611317
+2022-12-20 15:16:02,564:INFO:epoch[100], iter[2599], loss:158.196470, per step time: 361.17 ms, fps: 22.15, lr:0.009382237680256367
+2022-12-20 15:16:32,444:INFO:epoch[103], iter[2699], loss:169.608292, per step time: 298.80 ms, fps: 26.77, lr:0.0091850645840168
+2022-12-20 15:17:08,655:INFO:epoch[107], iter[2799], loss:160.250200, per step time: 362.09 ms, fps: 22.09, lr:0.008982979692518711
+2022-12-20 15:17:47,935:INFO:epoch[111], iter[2899], loss:155.487923, per step time: 392.80 ms, fps: 20.37, lr:0.008776295930147171
+2022-12-20 15:18:24,164:INFO:epoch[115], iter[2999], loss:143.833713, per step time: 362.28 ms, fps: 22.08, lr:0.008565330877900124
+2022-12-20 15:19:04,302:INFO:epoch[119], iter[3099], loss:144.945003, per step time: 401.37 ms, fps: 19.93, lr:0.008350410498678684
+2022-12-20 15:19:44,219:INFO:epoch[123], iter[3199], loss:149.831634, per step time: 399.16 ms, fps: 20.04, lr:0.008131865411996841
+2022-12-20 15:20:18,074:INFO:epoch[126], iter[3299], loss:142.226227, per step time: 338.55 ms, fps: 23.63, lr:0.007965780794620514
+2022-12-20 15:20:57,996:INFO:epoch[130], iter[3399], loss:137.304930, per step time: 399.22 ms, fps: 20.04, lr:0.007741707842797041
+2022-12-20 15:21:36,201:INFO:epoch[134], iter[3499], loss:149.333701, per step time: 382.04 ms, fps: 20.94, lr:0.007514949422329664
+2022-12-20 15:22:14,766:INFO:epoch[138], iter[3599], loss:144.491350, per step time: 385.64 ms, fps: 20.74, lr:0.007285854779183865
+2022-12-20 15:22:49,038:INFO:epoch[142], iter[3699], loss:142.166635, per step time: 342.71 ms, fps: 23.34, lr:0.007054777815937996
+2022-12-20 15:23:27,490:INFO:epoch[146], iter[3799], loss:139.947520, per step time: 384.52 ms, fps: 20.81, lr:0.006822073832154274
+2022-12-20 15:24:02,957:INFO:epoch[150], iter[3899], loss:143.829789, per step time: 354.66 ms, fps: 22.56, lr:0.006646694615483284
+2022-12-20 15:24:38,444:INFO:epoch[153], iter[3999], loss:134.908347, per step time: 354.86 ms, fps: 22.54, lr:0.006412009708583355
+2022-12-20 15:25:14,670:INFO:epoch[157], iter[4099], loss:134.661761, per step time: 362.26 ms, fps: 22.08, lr:0.006176689174026251
+2022-12-20 15:25:49,572:INFO:epoch[161], iter[4199], loss:131.311055, per step time: 349.01 ms, fps: 22.92, lr:0.005941096227616072
+2022-12-20 15:26:27,902:INFO:epoch[165], iter[4299], loss:127.641574, per step time: 383.29 ms, fps: 20.87, lr:0.005705594085156918
+2022-12-20 15:27:01,186:INFO:epoch[169], iter[4399], loss:143.128918, per step time: 332.83 ms, fps: 24.04, lr:0.0054705459624528885
+2022-12-20 15:27:35,377:INFO:epoch[173], iter[4499], loss:123.197735, per step time: 341.91 ms, fps: 23.40, lr:0.00523631414398551
+2022-12-20 15:28:08,834:INFO:epoch[176], iter[4599], loss:127.298321, per step time: 334.46 ms, fps: 23.92, lr:0.005061393138021231
+2022-12-20 15:28:48,652:INFO:epoch[180], iter[4699], loss:121.128053, per step time: 398.17 ms, fps: 20.09, lr:0.004829457961022854
+2022-12-20 15:29:25,971:INFO:epoch[184], iter[4799], loss:126.001261, per step time: 373.17 ms, fps: 21.44, lr:0.004599327687174082
+2022-12-20 15:30:03,126:INFO:epoch[188], iter[4899], loss:113.249911, per step time: 371.55 ms, fps: 21.53, lr:0.004371357150375843
+2022-12-20 15:30:39,799:INFO:epoch[192], iter[4999], loss:121.939306, per step time: 366.72 ms, fps: 21.82, lr:0.004145897924900055
+2022-12-20 15:31:22,828:INFO:epoch[196], iter[5099], loss:124.346314, per step time: 430.28 ms, fps: 18.59, lr:0.003923297859728336
+2022-12-20 15:32:05,072:INFO:epoch[200], iter[5199], loss:113.751852, per step time: 422.44 ms, fps: 18.94, lr:0.0037584302481263876
+2022-12-20 15:32:36,602:INFO:Processing... 0.00% 
+2022-12-20 15:32:38,378:INFO:Calculating mAP...
+2022-12-20 15:32:38,994:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_32_38.json
+2022-12-20 15:32:39,390:INFO:epoch: 200, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.408
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.777
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.310
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.552
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.444
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.285
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.211
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.513
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.559
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.588
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.619
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.437
+
+2022-12-20 15:32:39,391:INFO:update best result: 0.4084179992311108
+2022-12-20 15:32:43,067:INFO:update best checkpoint at: outputs/2022-12-20_time_14_35_45/ckpt_0/best_map.ckpt
+2022-12-20 15:32:51,556:INFO:Processing... 0.00% 
+2022-12-20 15:32:53,424:INFO:Calculating mAP...
+2022-12-20 15:32:54,256:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_32_54.json
+2022-12-20 15:32:54,686:INFO:epoch: 201, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.441
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.747
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.499
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.602
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.503
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.291
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.224
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.545
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.579
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.675
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.608
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.486
+
+2022-12-20 15:32:54,687:INFO:update best result: 0.4414209070600767
+2022-12-20 15:32:58,484:INFO:update best checkpoint at: outputs/2022-12-20_time_14_35_45/ckpt_0/best_map.ckpt
+2022-12-20 15:33:08,183:INFO:Processing... 0.00% 
+2022-12-20 15:33:10,435:INFO:Calculating mAP...
+2022-12-20 15:33:11,919:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_33_11.json
+2022-12-20 15:33:12,391:INFO:epoch: 202, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.401
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.735
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.444
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.526
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.463
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.279
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.190
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.523
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.547
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.600
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.577
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.485
+
+2022-12-20 15:33:23,687:INFO:Processing... 0.00% 
+2022-12-20 15:33:25,431:INFO:Calculating mAP...
+2022-12-20 15:33:26,056:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_33_25.json
+2022-12-20 15:33:26,457:INFO:epoch: 203, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.400
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.747
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.412
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.534
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.436
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.281
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.201
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.494
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.526
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.625
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.550
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.446
+
+2022-12-20 15:33:31,949:INFO:epoch[203], iter[5299], loss:115.852979, per step time: 868.76 ms, fps: 9.21, lr:0.0035416558384895325
+2022-12-20 15:33:37,076:INFO:Processing... 0.00% 
+2022-12-20 15:33:38,796:INFO:Calculating mAP...
+2022-12-20 15:33:39,401:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_33_39.json
+2022-12-20 15:33:39,804:INFO:epoch: 204, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.392
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.726
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.371
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.567
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.457
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.185
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.202
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.494
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.509
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.662
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.550
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.379
+
+2022-12-20 15:33:51,056:INFO:Processing... 0.00% 
+2022-12-20 15:33:52,765:INFO:Calculating mAP...
+2022-12-20 15:33:53,302:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_33_53.json
+2022-12-20 15:33:53,659:INFO:epoch: 205, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.441
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.730
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.435
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.573
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.510
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.288
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.235
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.511
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.532
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.619
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.581
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.400
+
+2022-12-20 15:34:05,691:INFO:Processing... 0.00% 
+2022-12-20 15:34:07,989:INFO:Calculating mAP...
+2022-12-20 15:34:08,712:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_34_08.json
+2022-12-20 15:34:09,108:INFO:epoch: 206, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.443
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.762
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.432
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.568
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.477
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.320
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.237
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.532
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.553
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.619
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.562
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.460
+
+2022-12-20 15:34:09,109:INFO:update best result: 0.44343133724138284
+2022-12-20 15:34:13,106:INFO:update best checkpoint at: outputs/2022-12-20_time_14_35_45/ckpt_0/best_map.ckpt
+2022-12-20 15:34:24,185:INFO:Processing... 0.00% 
+2022-12-20 15:34:25,950:INFO:Calculating mAP...
+2022-12-20 15:34:26,842:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_34_26.json
+2022-12-20 15:34:27,279:INFO:epoch: 207, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.394
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.752
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.308
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.555
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.450
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.298
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.207
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.481
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.538
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.644
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.565
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.443
+
+2022-12-20 15:34:30,446:INFO:epoch[207], iter[5399], loss:114.668453, per step time: 584.96 ms, fps: 13.68, lr:0.003328672144562006
+2022-12-20 15:34:37,197:INFO:Processing... 0.00% 
+2022-12-20 15:34:38,996:INFO:Calculating mAP...
+2022-12-20 15:34:39,624:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_34_39.json
+2022-12-20 15:34:40,023:INFO:epoch: 208, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.463
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.816
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.417
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.698
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.488
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.333
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.239
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.550
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.585
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.731
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.592
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.467
+
+2022-12-20 15:34:40,024:INFO:update best result: 0.4633410037920481
+2022-12-20 15:34:43,894:INFO:update best checkpoint at: outputs/2022-12-20_time_14_35_45/ckpt_0/best_map.ckpt
+2022-12-20 15:34:55,154:INFO:Processing... 0.00% 
+2022-12-20 15:34:56,850:INFO:Calculating mAP...
+2022-12-20 15:34:57,342:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_34_57.json
+2022-12-20 15:34:57,685:INFO:epoch: 209, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.468
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.776
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.560
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.581
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.497
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.407
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.225
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.571
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.592
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.637
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.596
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.528
+
+2022-12-20 15:34:57,686:INFO:update best result: 0.4683526727470018
+2022-12-20 15:35:01,632:INFO:update best checkpoint at: outputs/2022-12-20_time_14_35_45/ckpt_0/best_map.ckpt
+2022-12-20 15:35:10,964:INFO:Processing... 0.00% 
+2022-12-20 15:35:13,233:INFO:Calculating mAP...
+2022-12-20 15:35:13,878:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_35_13.json
+2022-12-20 15:35:14,262:INFO:epoch: 210, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.431
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.801
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.440
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.583
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.450
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.337
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.223
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.516
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.543
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.675
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.535
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.445
+
+2022-12-20 15:35:24,467:INFO:Processing... 0.00% 
+2022-12-20 15:35:26,192:INFO:Calculating mAP...
+2022-12-20 15:35:26,800:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_35_26.json
+2022-12-20 15:35:27,167:INFO:epoch: 211, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.425
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.766
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.361
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.563
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.436
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.351
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.245
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.526
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.587
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.594
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.604
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.512
+
+2022-12-20 15:35:30,305:INFO:epoch[211], iter[5499], loss:113.867078, per step time: 598.59 ms, fps: 13.36, lr:0.0031198072247207165
+2022-12-20 15:35:38,386:INFO:Processing... 0.00% 
+2022-12-20 15:35:40,164:INFO:Calculating mAP...
+2022-12-20 15:35:40,931:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_35_40.json
+2022-12-20 15:35:41,346:INFO:epoch: 212, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.450
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.788
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.486
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.637
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.485
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.330
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.216
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.545
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.581
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.688
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.592
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.517
+
+2022-12-20 15:35:53,404:INFO:Processing... 0.00% 
+2022-12-20 15:35:55,161:INFO:Calculating mAP...
+2022-12-20 15:35:55,807:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_35_55.json
+2022-12-20 15:35:56,187:INFO:epoch: 213, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.452
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.780
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.368
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.556
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.499
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.353
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.239
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.544
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.596
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.631
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.623
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.494
+
+2022-12-20 15:36:06,743:INFO:Processing... 0.00% 
+2022-12-20 15:36:08,464:INFO:Calculating mAP...
+2022-12-20 15:36:09,180:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_36_09.json
+2022-12-20 15:36:10,218:INFO:epoch: 214, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.444
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.749
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.469
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.604
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.510
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.304
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.229
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.541
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.581
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.688
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.627
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.450
+
+2022-12-20 15:36:22,148:INFO:Processing... 0.00% 
+2022-12-20 15:36:23,876:INFO:Calculating mAP...
+2022-12-20 15:36:24,538:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_36_24.json
+2022-12-20 15:36:24,926:INFO:epoch: 215, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.419
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.747
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.449
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.490
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.472
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.317
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.203
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.531
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.579
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.594
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.596
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.486
+
+2022-12-20 15:36:27,805:INFO:epoch[215], iter[5599], loss:108.066859, per step time: 574.99 ms, fps: 13.91, lr:0.0029153835494071245
+2022-12-20 15:36:36,099:INFO:Processing... 0.00% 
+2022-12-20 15:36:37,844:INFO:Calculating mAP...
+2022-12-20 15:36:38,414:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_36_38.json
+2022-12-20 15:36:38,788:INFO:epoch: 216, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.441
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.763
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.534
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.552
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.494
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.315
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.239
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.538
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.575
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.581
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.604
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.513
+
+2022-12-20 15:36:49,716:INFO:Processing... 0.00% 
+2022-12-20 15:36:51,484:INFO:Calculating mAP...
+2022-12-20 15:36:52,088:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_36_51.json
+2022-12-20 15:36:52,459:INFO:epoch: 217, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.413
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.745
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.428
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.557
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.465
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.277
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.173
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.530
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.574
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.675
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.612
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.439
+
+2022-12-20 15:37:02,232:INFO:Processing... 0.00% 
+2022-12-20 15:37:03,977:INFO:Calculating mAP...
+2022-12-20 15:37:04,533:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_37_04.json
+2022-12-20 15:37:04,888:INFO:epoch: 218, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.428
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.768
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.437
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.582
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.456
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.313
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.213
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.558
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.594
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.662
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.596
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.539
+
+2022-12-20 15:37:14,815:INFO:Processing... 0.00% 
+2022-12-20 15:37:16,555:INFO:Calculating mAP...
+2022-12-20 15:37:17,093:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_37_16.json
+2022-12-20 15:37:18,080:INFO:epoch: 219, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.404
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.782
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.372
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.420
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.437
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.329
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.233
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.513
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.538
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.719
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.538
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.466
+
+2022-12-20 15:37:19,448:INFO:epoch[219], iter[5699], loss:109.212612, per step time: 516.43 ms, fps: 15.49, lr:0.002715716138482094
+2022-12-20 15:37:28,555:INFO:Processing... 0.00% 
+2022-12-20 15:37:30,295:INFO:Calculating mAP...
+2022-12-20 15:37:30,953:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_37_30.json
+2022-12-20 15:37:31,341:INFO:epoch: 220, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.432
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.750
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.489
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.596
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.476
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.289
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.223
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.517
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.548
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.694
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.585
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.439
+
+2022-12-20 15:37:41,644:INFO:Processing... 0.00% 
+2022-12-20 15:37:43,361:INFO:Calculating mAP...
+2022-12-20 15:37:44,025:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_37_43.json
+2022-12-20 15:37:44,422:INFO:epoch: 221, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.410
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.770
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.400
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.557
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.437
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.304
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.209
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.515
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.564
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.694
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.546
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.512
+
+2022-12-20 15:37:55,355:INFO:Processing... 0.00% 
+2022-12-20 15:37:57,097:INFO:Calculating mAP...
+2022-12-20 15:37:57,704:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_37_57.json
+2022-12-20 15:37:58,098:INFO:epoch: 222, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.455
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.806
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.481
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.567
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.490
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.372
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.249
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.545
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.571
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.644
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.585
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.491
+
+2022-12-20 15:38:09,897:INFO:Processing... 0.00% 
+2022-12-20 15:38:11,658:INFO:Calculating mAP...
+2022-12-20 15:38:12,263:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_38_12.json
+2022-12-20 15:38:12,649:INFO:epoch: 223, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.413
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.750
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.384
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.506
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.463
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.333
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.221
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.493
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.521
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.606
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.546
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.456
+
+2022-12-20 15:38:13,159:INFO:epoch[223], iter[5799], loss:102.874534, per step time: 537.11 ms, fps: 14.89, lr:0.0025211127940565348
+2022-12-20 15:38:25,130:INFO:Processing... 0.00% 
+2022-12-20 15:38:26,841:INFO:Calculating mAP...
+2022-12-20 15:38:27,330:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_38_27.json
+2022-12-20 15:38:28,291:INFO:epoch: 224, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.466
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.788
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.474
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.556
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.521
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.331
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.260
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.571
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.609
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.650
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.623
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.546
+
+2022-12-20 15:38:40,248:INFO:Processing... 0.00% 
+2022-12-20 15:38:41,967:INFO:Calculating mAP...
+2022-12-20 15:38:42,551:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_38_42.json
+2022-12-20 15:38:42,910:INFO:epoch: 225, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.470
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.820
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.504
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.548
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.515
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.376
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.260
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.566
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.598
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.650
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.612
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.538
+
+2022-12-20 15:38:42,911:INFO:update best result: 0.46964943427098566
+2022-12-20 15:38:46,946:INFO:update best checkpoint at: outputs/2022-12-20_time_14_35_45/ckpt_0/best_map.ckpt
+2022-12-20 15:38:56,809:INFO:Processing... 0.00% 
+2022-12-20 15:38:58,511:INFO:Calculating mAP...
+2022-12-20 15:38:59,021:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_38_58.json
+2022-12-20 15:38:59,364:INFO:epoch: 226, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.494
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.814
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.606
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.618
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.521
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.450
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.249
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.577
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.602
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.706
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.627
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.518
+
+2022-12-20 15:38:59,365:INFO:update best result: 0.49448945502715036
+2022-12-20 15:39:03,364:INFO:update best checkpoint at: outputs/2022-12-20_time_14_35_45/ckpt_0/best_map.ckpt
+2022-12-20 15:39:08,761:INFO:epoch[226], iter[5899], loss:101.295237, per step time: 556.01 ms, fps: 14.39, lr:0.002378664445132017
+2022-12-20 15:39:14,677:INFO:Processing... 0.00% 
+2022-12-20 15:39:16,358:INFO:Calculating mAP...
+2022-12-20 15:39:16,824:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_39_16.json
+2022-12-20 15:39:17,145:INFO:epoch: 227, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.477
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.802
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.572
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.647
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.491
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.388
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.222
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.569
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.604
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.700
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.615
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.532
+
+2022-12-20 15:39:28,082:INFO:Processing... 0.00% 
+2022-12-20 15:39:30,444:INFO:Calculating mAP...
+2022-12-20 15:39:31,107:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_39_30.json
+2022-12-20 15:39:31,507:INFO:epoch: 228, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.469
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.798
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.540
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.594
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.504
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.359
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.241
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.558
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.585
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.675
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.600
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.483
+
+2022-12-20 15:39:41,963:INFO:Processing... 0.00% 
+2022-12-20 15:39:43,663:INFO:Calculating mAP...
+2022-12-20 15:39:44,158:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_39_44.json
+2022-12-20 15:39:44,504:INFO:epoch: 229, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.458
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.781
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.516
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.598
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.465
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.371
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.238
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.565
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.602
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.675
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.596
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.553
+
+2022-12-20 15:39:54,870:INFO:Processing... 0.00% 
+2022-12-20 15:39:56,604:INFO:Calculating mAP...
+2022-12-20 15:39:57,173:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_39_57.json
+2022-12-20 15:39:57,540:INFO:epoch: 230, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.470
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.800
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.496
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.584
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.501
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.375
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.235
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.567
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.603
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.700
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.608
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.512
+
+2022-12-20 15:40:02,261:INFO:epoch[230], iter[5999], loss:102.958123, per step time: 535.00 ms, fps: 14.95, lr:0.0021936402190476656
+2022-12-20 15:40:08,224:INFO:Processing... 0.00% 
+2022-12-20 15:40:09,942:INFO:Calculating mAP...
+2022-12-20 15:40:10,453:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_40_10.json
+2022-12-20 15:40:10,802:INFO:epoch: 231, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.447
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.791
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.476
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.545
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.494
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.299
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.226
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.547
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.572
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.656
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.585
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.470
+
+2022-12-20 15:40:21,801:INFO:Processing... 0.00% 
+2022-12-20 15:40:23,512:INFO:Calculating mAP...
+2022-12-20 15:40:24,043:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_40_23.json
+2022-12-20 15:40:24,389:INFO:epoch: 232, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.484
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.817
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.559
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.595
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.522
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.341
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.239
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.567
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.607
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.688
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.631
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.479
+
+2022-12-20 15:40:33,279:INFO:Processing... 0.00% 
+2022-12-20 15:40:34,981:INFO:Calculating mAP...
+2022-12-20 15:40:35,638:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_40_35.json
+2022-12-20 15:40:36,024:INFO:epoch: 233, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.467
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.824
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.488
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.600
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.515
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.334
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.245
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.560
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.585
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.688
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.600
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.516
+
+2022-12-20 15:40:45,863:INFO:Processing... 0.00% 
+2022-12-20 15:40:47,565:INFO:Calculating mAP...
+2022-12-20 15:40:48,126:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_40_48.json
+2022-12-20 15:40:49,110:INFO:epoch: 234, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.473
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.833
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.516
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.598
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.499
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.397
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.250
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.583
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.605
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.669
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.627
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.527
+
+2022-12-20 15:40:51,827:INFO:epoch[234], iter[6099], loss:101.026168, per step time: 495.66 ms, fps: 16.14, lr:0.0020144854206591845
+2022-12-20 15:40:59,519:INFO:Processing... 0.00% 
+2022-12-20 15:41:01,251:INFO:Calculating mAP...
+2022-12-20 15:41:01,828:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_41_01.json
+2022-12-20 15:41:02,194:INFO:epoch: 235, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.472
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.811
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.555
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.604
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.514
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.305
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.243
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.562
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.600
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.681
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.615
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.507
+
+2022-12-20 15:41:12,885:INFO:Processing... 0.00% 
+2022-12-20 15:41:14,617:INFO:Calculating mAP...
+2022-12-20 15:41:15,187:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_41_15.json
+2022-12-20 15:41:15,552:INFO:epoch: 236, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.452
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.810
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.488
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.552
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.485
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.335
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.226
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.543
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.592
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.656
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.600
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.493
+
+2022-12-20 15:41:24,916:INFO:Processing... 0.00% 
+2022-12-20 15:41:26,668:INFO:Calculating mAP...
+2022-12-20 15:41:27,199:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_41_27.json
+2022-12-20 15:41:27,563:INFO:epoch: 237, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.495
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.846
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.600
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.598
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.522
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.411
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.258
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.583
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.602
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.694
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.608
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.522
+
+2022-12-20 15:41:27,563:INFO:update best result: 0.4954169378351011
+2022-12-20 15:41:31,567:INFO:update best checkpoint at: outputs/2022-12-20_time_14_35_45/ckpt_0/best_map.ckpt
+2022-12-20 15:41:44,636:INFO:Processing... 0.00% 
+2022-12-20 15:41:46,411:INFO:Calculating mAP...
+2022-12-20 15:41:46,948:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_41_46.json
+2022-12-20 15:41:47,305:INFO:epoch: 238, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.487
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.805
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.615
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.552
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.542
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.347
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.252
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.567
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.594
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.669
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.619
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.493
+
+2022-12-20 15:41:49,528:INFO:epoch[238], iter[6199], loss:99.130719, per step time: 577.00 ms, fps: 13.86, lr:0.0018414758378639817
+2022-12-20 15:41:57,450:INFO:Processing... 0.00% 
+2022-12-20 15:41:59,172:INFO:Calculating mAP...
+2022-12-20 15:41:59,813:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_41_59.json
+2022-12-20 15:42:00,224:INFO:epoch: 239, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.473
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.802
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.448
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.635
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.504
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.331
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.250
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.585
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.607
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.700
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.600
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.534
+
+2022-12-20 15:42:11,841:INFO:Processing... 0.00% 
+2022-12-20 15:42:13,507:INFO:Calculating mAP...
+2022-12-20 15:42:13,981:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_42_13.json
+2022-12-20 15:42:14,322:INFO:epoch: 240, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.485
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.816
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.529
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.586
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.511
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.392
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.256
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.584
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.611
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.694
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.612
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.533
+
+2022-12-20 15:42:25,473:INFO:Processing... 0.00% 
+2022-12-20 15:42:27,172:INFO:Calculating mAP...
+2022-12-20 15:42:27,762:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_42_27.json
+2022-12-20 15:42:28,126:INFO:epoch: 241, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.503
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.807
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.607
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.625
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.533
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.376
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.263
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.587
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.619
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.719
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.635
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.521
+
+2022-12-20 15:42:28,126:INFO:update best result: 0.5033652107281753
+2022-12-20 15:42:31,806:INFO:update best checkpoint at: outputs/2022-12-20_time_14_35_45/ckpt_0/best_map.ckpt
+2022-12-20 15:42:41,164:INFO:Processing... 0.00% 
+2022-12-20 15:42:42,917:INFO:Calculating mAP...
+2022-12-20 15:42:43,489:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_42_43.json
+2022-12-20 15:42:43,876:INFO:epoch: 242, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.496
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.811
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.574
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.692
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.498
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.377
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.254
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.588
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.619
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.769
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.619
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.517
+
+2022-12-20 15:42:45,119:INFO:epoch[242], iter[6299], loss:96.991927, per step time: 555.90 ms, fps: 14.39, lr:0.0016748784109950066
+2022-12-20 15:42:54,474:INFO:Processing... 0.00% 
+2022-12-20 15:42:56,147:INFO:Calculating mAP...
+2022-12-20 15:42:56,630:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_42_56.json
+2022-12-20 15:42:56,958:INFO:epoch: 243, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.493
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.773
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.586
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.698
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.549
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.326
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.237
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.579
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.606
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.738
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.646
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.485
+
+2022-12-20 15:43:07,986:INFO:Processing... 0.00% 
+2022-12-20 15:43:09,690:INFO:Calculating mAP...
+2022-12-20 15:43:10,178:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_43_10.json
+2022-12-20 15:43:10,942:INFO:epoch: 244, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.488
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.821
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.537
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.623
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.510
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.365
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.241
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.556
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.598
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.706
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.627
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.480
+
+2022-12-20 15:43:19,588:INFO:Processing... 0.00% 
+2022-12-20 15:43:21,310:INFO:Calculating mAP...
+2022-12-20 15:43:21,866:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_43_21.json
+2022-12-20 15:43:22,330:INFO:epoch: 245, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.487
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.821
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.546
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.574
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.487
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.436
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.254
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.547
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.589
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.681
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.600
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.516
+
+2022-12-20 15:43:32,837:INFO:Processing... 0.00% 
+2022-12-20 15:43:34,531:INFO:Calculating mAP...
+2022-12-20 15:43:35,063:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_43_34.json
+2022-12-20 15:43:35,417:INFO:epoch: 246, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.487
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.820
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.568
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.594
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.504
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.435
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.250
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.570
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.595
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.731
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.592
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.552
+
+2022-12-20 15:43:35,945:INFO:epoch[246], iter[6399], loss:105.606763, per step time: 508.25 ms, fps: 15.74, lr:0.001514950068667531
+2022-12-20 15:43:45,920:INFO:Processing... 0.00% 
+2022-12-20 15:43:47,632:INFO:Calculating mAP...
+2022-12-20 15:43:48,068:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_43_47.json
+2022-12-20 15:43:48,480:INFO:epoch: 247, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.494
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.849
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.574
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.578
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.508
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.438
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.254
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.581
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.604
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.706
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.612
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.514
+
+2022-12-20 15:43:58,886:INFO:Processing... 0.00% 
+2022-12-20 15:44:00,617:INFO:Calculating mAP...
+2022-12-20 15:44:01,155:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_44_01.json
+2022-12-20 15:44:01,509:INFO:epoch: 248, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.454
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.820
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.436
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.620
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.445
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.419
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.230
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.547
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.587
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.700
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.588
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.501
+
+2022-12-20 15:44:11,249:INFO:Processing... 0.00% 
+2022-12-20 15:44:12,969:INFO:Calculating mAP...
+2022-12-20 15:44:13,496:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_44_13.json
+2022-12-20 15:44:13,852:INFO:epoch: 249, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.495
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.837
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.598
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.584
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.497
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.441
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.258
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.573
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.590
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.706
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.569
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.537
+
+2022-12-20 15:44:24,705:INFO:epoch[250], iter[6499], loss:103.992099, per step time: 487.60 ms, fps: 16.41, lr:0.00139952905010432
+2022-12-20 15:44:25,752:INFO:Processing... 0.00% 
+2022-12-20 15:44:27,449:INFO:Calculating mAP...
+2022-12-20 15:44:28,001:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_44_27.json
+2022-12-20 15:44:28,825:INFO:epoch: 250, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.426
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.782
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.454
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.533
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.446
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.236
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.203
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.497
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.543
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.669
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.562
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.360
+
+2022-12-20 15:44:37,714:INFO:Processing... 0.00% 
+2022-12-20 15:44:39,438:INFO:Calculating mAP...
+2022-12-20 15:44:39,993:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_44_39.json
+2022-12-20 15:44:40,356:INFO:epoch: 251, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.459
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.807
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.491
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.641
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.452
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.375
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.241
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.537
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.572
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.744
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.558
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.496
+
+2022-12-20 15:44:50,566:INFO:Processing... 0.00% 
+2022-12-20 15:44:52,290:INFO:Calculating mAP...
+2022-12-20 15:44:52,890:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_44_52.json
+2022-12-20 15:44:53,275:INFO:epoch: 252, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.466
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.792
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.541
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.573
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.474
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.391
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.250
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.556
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.602
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.681
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.612
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.532
+
+2022-12-20 15:45:04,939:INFO:Processing... 0.00% 
+2022-12-20 15:45:06,672:INFO:Calculating mAP...
+2022-12-20 15:45:07,158:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_45_07.json
+2022-12-20 15:45:07,486:INFO:epoch: 253, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.482
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.816
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.551
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.649
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.491
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.396
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.243
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.575
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.596
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.669
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.600
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.529
+
+2022-12-20 15:45:12,785:INFO:epoch[253], iter[6599], loss:90.319725, per step time: 480.80 ms, fps: 16.64, lr:0.001251858426257968
+2022-12-20 15:45:19,053:INFO:Processing... 0.00% 
+2022-12-20 15:45:20,751:INFO:Calculating mAP...
+2022-12-20 15:45:21,266:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_45_21.json
+2022-12-20 15:45:21,605:INFO:epoch: 254, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.483
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.817
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.498
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.609
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.521
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.348
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.237
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.560
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.587
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.700
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.612
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.470
+
+2022-12-20 15:45:33,162:INFO:Processing... 0.00% 
+2022-12-20 15:45:34,810:INFO:Calculating mAP...
+2022-12-20 15:45:35,213:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_45_35.json
+2022-12-20 15:45:36,140:INFO:epoch: 255, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.469
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.783
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.509
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.610
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.491
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.350
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.226
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.554
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.577
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.681
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.592
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.452
+
+2022-12-20 15:45:47,024:INFO:Processing... 0.00% 
+2022-12-20 15:45:48,699:INFO:Calculating mAP...
+2022-12-20 15:45:49,168:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_45_49.json
+2022-12-20 15:45:49,508:INFO:epoch: 256, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.489
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.798
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.560
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.616
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.505
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.391
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.241
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.567
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.596
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.706
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.619
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.490
+
+2022-12-20 15:46:00,539:INFO:Processing... 0.00% 
+2022-12-20 15:46:02,297:INFO:Calculating mAP...
+2022-12-20 15:46:02,842:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_46_02.json
+2022-12-20 15:46:03,198:INFO:epoch: 257, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.501
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.817
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.566
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.597
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.546
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.410
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.245
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.567
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.600
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.662
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.638
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.488
+
+2022-12-20 15:46:06,108:INFO:epoch[257], iter[6699], loss:101.468967, per step time: 533.22 ms, fps: 15.00, lr:0.0011115091620013118
+2022-12-20 15:46:12,975:INFO:Processing... 0.00% 
+2022-12-20 15:46:14,686:INFO:Calculating mAP...
+2022-12-20 15:46:15,300:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_46_15.json
+2022-12-20 15:46:15,690:INFO:epoch: 258, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.483
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.821
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.551
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.619
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.503
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.416
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.245
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.581
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.629
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.725
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.642
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.541
+
+2022-12-20 15:46:25,649:INFO:Processing... 0.00% 
+2022-12-20 15:46:27,366:INFO:Calculating mAP...
+2022-12-20 15:46:27,901:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_46_27.json
+2022-12-20 15:46:28,261:INFO:epoch: 259, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.442
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.791
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.501
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.540
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.453
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.358
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.211
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.535
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.577
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.631
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.577
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.507
+
+2022-12-20 15:46:40,042:INFO:Processing... 0.00% 
+2022-12-20 15:46:41,731:INFO:Calculating mAP...
+2022-12-20 15:46:42,181:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_46_42.json
+2022-12-20 15:46:42,502:INFO:epoch: 260, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.477
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.811
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.531
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.579
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.498
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.391
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.233
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.566
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.596
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.662
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.604
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.499
+
+2022-12-20 15:46:52,269:INFO:Processing... 0.00% 
+2022-12-20 15:46:53,955:INFO:Calculating mAP...
+2022-12-20 15:46:54,518:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_46_54.json
+2022-12-20 15:46:55,407:INFO:epoch: 261, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.481
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.816
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.527
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.618
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.520
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.366
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.228
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.565
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.605
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.713
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.619
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.489
+
+2022-12-20 15:46:58,225:INFO:epoch[261], iter[6799], loss:95.727593, per step time: 521.16 ms, fps: 15.35, lr:0.0009786974405869842
+2022-12-20 15:47:05,887:INFO:Processing... 0.00% 
+2022-12-20 15:47:07,572:INFO:Calculating mAP...
+2022-12-20 15:47:08,040:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_47_07.json
+2022-12-20 15:47:08,362:INFO:epoch: 262, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.463
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.814
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.522
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.604
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.484
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.373
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.226
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.543
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.572
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.694
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.588
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.477
+
+2022-12-20 15:47:18,414:INFO:Processing... 0.00% 
+2022-12-20 15:47:20,186:INFO:Calculating mAP...
+2022-12-20 15:47:20,660:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_47_20.json
+2022-12-20 15:47:21,017:INFO:epoch: 263, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.464
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.799
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.547
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.613
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.473
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.376
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.224
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.558
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.585
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.719
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.569
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.499
+
+2022-12-20 15:47:32,580:INFO:Processing... 0.00% 
+2022-12-20 15:47:34,280:INFO:Calculating mAP...
+2022-12-20 15:47:34,699:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_47_34.json
+2022-12-20 15:47:35,017:INFO:epoch: 264, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.488
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.844
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.571
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.568
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.507
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.410
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.243
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.565
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.603
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.631
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.612
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.522
+
+2022-12-20 15:47:47,140:INFO:Processing... 0.00% 
+2022-12-20 15:47:48,833:INFO:Calculating mAP...
+2022-12-20 15:47:49,253:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_47_49.json
+2022-12-20 15:47:49,561:INFO:epoch: 265, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.489
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.820
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.576
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.646
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.493
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.404
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.256
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.590
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.613
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.694
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.623
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.513
+
+2022-12-20 15:47:51,822:INFO:epoch[265], iter[6899], loss:93.189777, per step time: 535.96 ms, fps: 14.93, lr:0.0008536283276043832
+2022-12-20 15:48:00,480:INFO:Processing... 0.00% 
+2022-12-20 15:48:02,167:INFO:Calculating mAP...
+2022-12-20 15:48:02,645:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_48_02.json
+2022-12-20 15:48:02,979:INFO:epoch: 266, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.497
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.830
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.635
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.607
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.515
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.413
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.252
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.577
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.606
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.675
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.615
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.529
+
+2022-12-20 15:48:14,777:INFO:Processing... 0.00% 
+2022-12-20 15:48:16,522:INFO:Calculating mAP...
+2022-12-20 15:48:16,997:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_48_16.json
+2022-12-20 15:48:17,343:INFO:epoch: 267, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.505
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.830
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.585
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.610
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.524
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.407
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.247
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.579
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.598
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.694
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.604
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.501
+
+2022-12-20 15:48:17,343:INFO:update best result: 0.5047298322563054
+2022-12-20 15:48:21,603:INFO:update best checkpoint at: outputs/2022-12-20_time_14_35_45/ckpt_0/best_map.ckpt
+2022-12-20 15:48:32,818:INFO:Processing... 0.00% 
+2022-12-20 15:48:34,560:INFO:Calculating mAP...
+2022-12-20 15:48:35,014:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_48_34.json
+2022-12-20 15:48:35,725:INFO:epoch: 268, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.496
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.826
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.582
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.629
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.504
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.398
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.243
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.566
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.610
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.700
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.623
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.501
+
+2022-12-20 15:48:46,582:INFO:Processing... 0.00% 
+2022-12-20 15:48:48,299:INFO:Calculating mAP...
+2022-12-20 15:48:48,762:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_48_48.json
+2022-12-20 15:48:49,109:INFO:epoch: 269, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.507
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.833
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.603
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.644
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.513
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.407
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.250
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.594
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.623
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.725
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.619
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.517
+
+2022-12-20 15:48:49,110:INFO:update best result: 0.5071430633308969
+2022-12-20 15:48:52,854:INFO:update best checkpoint at: outputs/2022-12-20_time_14_35_45/ckpt_0/best_map.ckpt
+2022-12-20 15:48:54,225:INFO:epoch[269], iter[6999], loss:91.307924, per step time: 624.02 ms, fps: 12.82, lr:0.0007364945486187935
+2022-12-20 15:49:03,222:INFO:Processing... 0.00% 
+2022-12-20 15:49:04,885:INFO:Calculating mAP...
+2022-12-20 15:49:05,361:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_49_05.json
+2022-12-20 15:49:05,687:INFO:epoch: 270, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.500
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.812
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.573
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.646
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.505
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.378
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.256
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.587
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.617
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.744
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.608
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.535
+
+2022-12-20 15:49:16,051:INFO:Processing... 0.00% 
+2022-12-20 15:49:17,744:INFO:Calculating mAP...
+2022-12-20 15:49:18,202:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_49_18.json
+2022-12-20 15:49:18,535:INFO:epoch: 271, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.483
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.815
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.568
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.592
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.500
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.396
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.239
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.564
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.585
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.675
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.592
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.484
+
+2022-12-20 15:49:30,788:INFO:Processing... 0.00% 
+2022-12-20 15:49:32,458:INFO:Calculating mAP...
+2022-12-20 15:49:32,880:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_49_32.json
+2022-12-20 15:49:33,191:INFO:epoch: 272, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.479
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.791
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.555
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.578
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.482
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.411
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.232
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.558
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.600
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.662
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.604
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.519
+
+2022-12-20 15:49:44,647:INFO:Processing... 0.00% 
+2022-12-20 15:49:46,329:INFO:Calculating mAP...
+2022-12-20 15:49:46,777:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_49_46.json
+2022-12-20 15:49:47,096:INFO:epoch: 273, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.461
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.778
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.554
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.561
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.484
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.376
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.237
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.531
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.583
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.631
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.608
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.487
+
+2022-12-20 15:49:47,475:INFO:epoch[273], iter[7099], loss:100.636502, per step time: 532.49 ms, fps: 15.02, lr:0.0006274766637943685
+2022-12-20 15:49:59,104:INFO:Processing... 0.00% 
+2022-12-20 15:50:00,776:INFO:Calculating mAP...
+2022-12-20 15:50:01,194:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_50_01.json
+2022-12-20 15:50:01,498:INFO:epoch: 274, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.485
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.805
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.563
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.589
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.492
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.399
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.239
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.556
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.602
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.656
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.604
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.516
+
+2022-12-20 15:50:12,937:INFO:Processing... 0.00% 
+2022-12-20 15:50:15,172:INFO:Calculating mAP...
+2022-12-20 15:50:15,604:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_50_15.json
+2022-12-20 15:50:15,921:INFO:epoch: 275, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.469
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.797
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.551
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.589
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.477
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.393
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.233
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.539
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.572
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.669
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.577
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.488
+
+2022-12-20 15:50:24,783:INFO:Processing... 0.00% 
+2022-12-20 15:50:26,480:INFO:Calculating mAP...
+2022-12-20 15:50:26,962:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_50_26.json
+2022-12-20 15:50:27,299:INFO:epoch: 276, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.483
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.837
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.582
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.600
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.474
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.404
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.244
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.549
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.585
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.688
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.585
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.497
+
+2022-12-20 15:50:31,871:INFO:epoch[276], iter[7199], loss:95.300968, per step time: 443.96 ms, fps: 18.02, lr:0.0005511409835889935
+2022-12-20 15:50:37,392:INFO:Processing... 0.00% 
+2022-12-20 15:50:39,111:INFO:Calculating mAP...
+2022-12-20 15:50:39,596:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_50_39.json
+2022-12-20 15:50:39,924:INFO:epoch: 277, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.491
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.823
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.617
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.584
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.488
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.429
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.248
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.558
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.589
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.662
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.588
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.523
+
+2022-12-20 15:50:49,945:INFO:Processing... 0.00% 
+2022-12-20 15:50:51,672:INFO:Calculating mAP...
+2022-12-20 15:50:52,073:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_50_52.json
+2022-12-20 15:50:52,373:INFO:epoch: 278, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.494
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.830
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.599
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.697
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.476
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.408
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.246
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.569
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.611
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.719
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.631
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.503
+
+2022-12-20 15:51:02,104:INFO:Processing... 0.00% 
+2022-12-20 15:51:03,849:INFO:Calculating mAP...
+2022-12-20 15:51:04,245:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_51_04.json
+2022-12-20 15:51:04,548:INFO:epoch: 279, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.495
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.821
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.556
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.704
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.479
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.404
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.254
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.562
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.585
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.738
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.577
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.503
+
+2022-12-20 15:51:15,158:INFO:Processing... 0.00% 
+2022-12-20 15:51:16,837:INFO:Calculating mAP...
+2022-12-20 15:51:17,344:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_51_17.json
+2022-12-20 15:51:17,672:INFO:epoch: 280, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.494
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.844
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.562
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.583
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.512
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.405
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.252
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.577
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.598
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.669
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.619
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.501
+
+2022-12-20 15:51:23,652:INFO:epoch[280], iter[7299], loss:91.572967, per step time: 517.80 ms, fps: 15.45, lr:0.0004567228024825454
+2022-12-20 15:51:29,977:INFO:Processing... 0.00% 
+2022-12-20 15:51:31,708:INFO:Calculating mAP...
+2022-12-20 15:51:32,170:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_51_32.json
+2022-12-20 15:51:33,136:INFO:epoch: 281, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.488
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.816
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.587
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.605
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.493
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.385
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.254
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.558
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.596
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.694
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.592
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.509
+
+2022-12-20 15:51:42,366:INFO:Processing... 0.00% 
+2022-12-20 15:51:44,144:INFO:Calculating mAP...
+2022-12-20 15:51:44,667:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_51_44.json
+2022-12-20 15:51:45,027:INFO:epoch: 282, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.501
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.830
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.571
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.634
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.501
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.404
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.250
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.564
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.589
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.700
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.577
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.511
+
+2022-12-20 15:51:55,193:INFO:Processing... 0.00% 
+2022-12-20 15:51:56,870:INFO:Calculating mAP...
+2022-12-20 15:51:57,357:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_51_57.json
+2022-12-20 15:51:57,699:INFO:epoch: 283, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.504
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.803
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.592
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.645
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.499
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.405
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.261
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.566
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.606
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.713
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.612
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.527
+
+2022-12-20 15:52:07,502:INFO:Processing... 0.00% 
+2022-12-20 15:52:09,196:INFO:Calculating mAP...
+2022-12-20 15:52:09,633:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_52_09.json
+2022-12-20 15:52:09,949:INFO:epoch: 284, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.500
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.836
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.551
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.602
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.515
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.390
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.261
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.556
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.598
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.675
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.623
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.504
+
+2022-12-20 15:52:12,653:INFO:epoch[284], iter[7399], loss:93.477749, per step time: 490.00 ms, fps: 16.33, lr:0.00037085197982378304
+2022-12-20 15:52:19,503:INFO:Processing... 0.00% 
+2022-12-20 15:52:21,212:INFO:Calculating mAP...
+2022-12-20 15:52:21,684:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_52_21.json
+2022-12-20 15:52:22,014:INFO:epoch: 285, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.505
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.830
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.565
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.619
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.520
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.398
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.254
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.577
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.609
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.688
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.619
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.519
+
+2022-12-20 15:52:35,149:INFO:Processing... 0.00% 
+2022-12-20 15:52:36,827:INFO:Calculating mAP...
+2022-12-20 15:52:37,266:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_52_37.json
+2022-12-20 15:52:37,582:INFO:epoch: 286, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.512
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.831
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.564
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.610
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.534
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.401
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.256
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.579
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.600
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.681
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.604
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.513
+
+2022-12-20 15:52:37,582:INFO:update best result: 0.5124449227045225
+2022-12-20 15:52:41,106:INFO:update best checkpoint at: outputs/2022-12-20_time_14_35_45/ckpt_0/best_map.ckpt
+2022-12-20 15:52:51,898:INFO:Processing... 0.00% 
+2022-12-20 15:52:53,586:INFO:Calculating mAP...
+2022-12-20 15:52:54,013:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_52_53.json
+2022-12-20 15:52:54,721:INFO:epoch: 287, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.495
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.820
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.601
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.640
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.509
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.371
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.246
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.568
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.592
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.713
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.604
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.483
+
+2022-12-20 15:53:03,895:INFO:Processing... 0.00% 
+2022-12-20 15:53:05,579:INFO:Calculating mAP...
+2022-12-20 15:53:06,052:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_53_05.json
+2022-12-20 15:53:06,383:INFO:epoch: 288, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.502
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.830
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.573
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.637
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.510
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.394
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.250
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.564
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.602
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.713
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.600
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.519
+
+2022-12-20 15:53:10,064:INFO:epoch[288], iter[7499], loss:87.952942, per step time: 574.10 ms, fps: 13.93, lr:0.0002936609089374542
+2022-12-20 15:53:17,826:INFO:Processing... 0.00% 
+2022-12-20 15:53:19,557:INFO:Calculating mAP...
+2022-12-20 15:53:20,002:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_53_19.json
+2022-12-20 15:53:20,318:INFO:epoch: 289, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.488
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.834
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.560
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.598
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.488
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.404
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.256
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.556
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.590
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.675
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.592
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.503
+
+2022-12-20 15:53:30,134:INFO:Processing... 0.00% 
+2022-12-20 15:53:31,855:INFO:Calculating mAP...
+2022-12-20 15:53:32,305:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_53_32.json
+2022-12-20 15:53:32,620:INFO:epoch: 290, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.505
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.831
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.589
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.616
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.509
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.411
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.263
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.581
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.600
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.694
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.592
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.518
+
+2022-12-20 15:53:41,947:INFO:Processing... 0.00% 
+2022-12-20 15:53:43,640:INFO:Calculating mAP...
+2022-12-20 15:53:44,127:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_53_44.json
+2022-12-20 15:53:44,464:INFO:epoch: 291, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.499
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.832
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.582
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.631
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.495
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.405
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.259
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.560
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.604
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.700
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.619
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.517
+
+2022-12-20 15:53:55,264:INFO:Processing... 0.00% 
+2022-12-20 15:53:56,983:INFO:Calculating mAP...
+2022-12-20 15:53:57,437:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_53_57.json
+2022-12-20 15:53:57,755:INFO:epoch: 292, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.497
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.832
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.584
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.614
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.500
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.392
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.252
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.549
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.591
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.688
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.604
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.483
+
+2022-12-20 15:54:00,300:INFO:epoch[292], iter[7599], loss:89.083187, per step time: 502.35 ms, fps: 15.93, lr:0.00022526858083438128
+2022-12-20 15:54:08,562:INFO:Processing... 0.00% 
+2022-12-20 15:54:10,249:INFO:Calculating mAP...
+2022-12-20 15:54:10,706:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_54_10.json
+2022-12-20 15:54:11,023:INFO:epoch: 293, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.502
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.832
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.614
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.610
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.502
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.411
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.257
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.566
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.598
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.688
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.600
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.509
+
+2022-12-20 15:54:21,990:INFO:Processing... 0.00% 
+2022-12-20 15:54:23,716:INFO:Calculating mAP...
+2022-12-20 15:54:24,718:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_54_24.json
+2022-12-20 15:54:25,029:INFO:epoch: 294, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.505
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.837
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.587
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.642
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.504
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.399
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.259
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.569
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.613
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.713
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.635
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.501
+
+2022-12-20 15:54:34,795:INFO:Processing... 0.00% 
+2022-12-20 15:54:36,489:INFO:Calculating mAP...
+2022-12-20 15:54:36,935:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_54_36.json
+2022-12-20 15:54:37,253:INFO:epoch: 295, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.495
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.836
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.607
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.592
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.499
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.411
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.259
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.562
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.606
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.681
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.623
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.511
+
+2022-12-20 15:54:48,279:INFO:Processing... 0.00% 
+2022-12-20 15:54:50,009:INFO:Calculating mAP...
+2022-12-20 15:54:50,470:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_54_50.json
+2022-12-20 15:54:50,786:INFO:epoch: 296, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.501
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.833
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.581
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.642
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.508
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.406
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.261
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.571
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.602
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.713
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.615
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.514
+
+2022-12-20 15:54:51,401:INFO:epoch[296], iter[7699], loss:87.873745, per step time: 511.01 ms, fps: 15.66, lr:0.00016578048234805465
+2022-12-20 15:55:00,244:INFO:Processing... 0.00% 
+2022-12-20 15:55:01,933:INFO:Calculating mAP...
+2022-12-20 15:55:02,390:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_55_02.json
+2022-12-20 15:55:02,710:INFO:epoch: 297, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.485
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.812
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.595
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.593
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.488
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.404
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.255
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.556
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.598
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.675
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.608
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.509
+
+2022-12-20 15:55:13,606:INFO:Processing... 0.00% 
+2022-12-20 15:55:15,305:INFO:Calculating mAP...
+2022-12-20 15:55:15,732:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_55_15.json
+2022-12-20 15:55:16,050:INFO:epoch: 298, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.512
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.836
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.568
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.643
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.518
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.405
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.261
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.570
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.606
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.713
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.615
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.505
+
+2022-12-20 15:55:25,374:INFO:Processing... 0.00% 
+2022-12-20 15:55:27,065:INFO:Calculating mAP...
+2022-12-20 15:55:27,494:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_55_27.json
+2022-12-20 15:55:27,807:INFO:epoch: 299, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.500
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.841
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.584
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.601
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.502
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.407
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.259
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.562
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.591
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.688
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.596
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.497
+
+2022-12-20 15:55:36,689:INFO:epoch[300], iter[7799], loss:90.899022, per step time: 452.87 ms, fps: 17.67, lr:0.0001270634966203943
+2022-12-20 15:55:37,720:INFO:Processing... 0.00% 
+2022-12-20 15:55:39,393:INFO:Calculating mAP...
+2022-12-20 15:55:40,272:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_55_40.json
+2022-12-20 15:55:40,604:INFO:epoch: 300, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.493
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.831
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.559
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.604
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.509
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.396
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.246
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.566
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.590
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.681
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.600
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.497
+
+2022-12-20 15:55:49,432:INFO:Processing... 0.00% 
+2022-12-20 15:55:51,120:INFO:Calculating mAP...
+2022-12-20 15:55:51,581:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_55_51.json
+2022-12-20 15:55:51,900:INFO:epoch: 301, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.503
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.835
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.562
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.637
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.512
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.399
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.258
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.566
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.598
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.706
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.608
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.507
+
+2022-12-20 15:56:01,917:INFO:Processing... 0.00% 
+2022-12-20 15:56:03,593:INFO:Calculating mAP...
+2022-12-20 15:56:03,986:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_56_03.json
+2022-12-20 15:56:04,284:INFO:epoch: 302, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.504
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.830
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.589
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.635
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.499
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.394
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.257
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.566
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.602
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.719
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.608
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.501
+
+2022-12-20 15:56:14,985:INFO:Processing... 0.00% 
+2022-12-20 15:56:16,654:INFO:Calculating mAP...
+2022-12-20 15:56:17,114:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_56_17.json
+2022-12-20 15:56:17,437:INFO:epoch: 303, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.511
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.840
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.586
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.615
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.518
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.417
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.267
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.575
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.607
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.681
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.619
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.519
+
+2022-12-20 15:56:21,152:INFO:epoch[303], iter[7899], loss:94.913102, per step time: 444.63 ms, fps: 17.99, lr:8.337014878634363e-05
+2022-12-20 15:56:26,475:INFO:Processing... 0.00% 
+2022-12-20 15:56:28,178:INFO:Calculating mAP...
+2022-12-20 15:56:28,585:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_56_28.json
+2022-12-20 15:56:28,897:INFO:epoch: 304, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.499
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.834
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.578
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.590
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.510
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.415
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.254
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.568
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.606
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.681
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.619
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.509
+
+2022-12-20 15:56:41,409:INFO:Processing... 0.00% 
+2022-12-20 15:56:43,128:INFO:Calculating mAP...
+2022-12-20 15:56:43,595:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_56_43.json
+2022-12-20 15:56:43,926:INFO:epoch: 305, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.512
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.837
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.578
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.634
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.521
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.413
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.263
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.577
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.609
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.713
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.619
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.515
+
+2022-12-20 15:56:54,015:INFO:Processing... 0.00% 
+2022-12-20 15:56:55,712:INFO:Calculating mAP...
+2022-12-20 15:56:56,144:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_56_56.json
+2022-12-20 15:56:56,460:INFO:epoch: 306, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.497
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.830
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.577
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.590
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.513
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.406
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.263
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.571
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.602
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.681
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.615
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.511
+
+2022-12-20 15:57:08,361:INFO:Processing... 0.00% 
+2022-12-20 15:57:10,035:INFO:Calculating mAP...
+2022-12-20 15:57:10,474:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_57_10.json
+2022-12-20 15:57:10,784:INFO:epoch: 307, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.501
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.833
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.562
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.607
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.514
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.400
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.250
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.566
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.606
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.688
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.627
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.497
+
+2022-12-20 15:57:14,480:INFO:epoch[307], iter[7999], loss:85.830987, per step time: 533.27 ms, fps: 15.00, lr:4.8799814976518974e-05
+2022-12-20 15:57:21,097:INFO:Processing... 0.00% 
+2022-12-20 15:57:22,788:INFO:Calculating mAP...
+2022-12-20 15:57:23,226:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_57_23.json
+2022-12-20 15:57:23,546:INFO:epoch: 308, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.515
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.836
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.615
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.617
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.533
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.400
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.254
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.577
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.609
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.688
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.627
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.505
+
+2022-12-20 15:57:23,547:INFO:update best result: 0.5148102209602655
+2022-12-20 15:57:27,160:INFO:update best checkpoint at: outputs/2022-12-20_time_14_35_45/ckpt_0/best_map.ckpt
+2022-12-20 15:57:37,248:INFO:Processing... 0.00% 
+2022-12-20 15:57:38,929:INFO:Calculating mAP...
+2022-12-20 15:57:39,407:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_57_39.json
+2022-12-20 15:57:39,733:INFO:epoch: 309, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.510
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.835
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.578
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.612
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.524
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.403
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.263
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.573
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.604
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.681
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.619
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.505
+
+2022-12-20 15:57:50,154:INFO:Processing... 0.00% 
+2022-12-20 15:57:51,844:INFO:Calculating mAP...
+2022-12-20 15:57:52,292:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_57_52.json
+2022-12-20 15:57:52,610:INFO:epoch: 310, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.510
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.831
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.570
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.627
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.525
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.411
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.254
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.581
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.611
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.706
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.627
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.515
+
+2022-12-20 15:58:01,861:INFO:Processing... 0.00% 
+2022-12-20 15:58:03,541:INFO:Calculating mAP...
+2022-12-20 15:58:04,022:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_58_03.json
+2022-12-20 15:58:04,346:INFO:epoch: 311, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.506
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.833
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.548
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.631
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.519
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.404
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.250
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.568
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.602
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.706
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.619
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.497
+
+2022-12-20 15:58:08,270:INFO:epoch[311], iter[8099], loss:81.688064, per step time: 537.90 ms, fps: 14.87, lr:2.340580067539122e-05
+2022-12-20 15:58:15,373:INFO:Processing... 0.00% 
+2022-12-20 15:58:17,031:INFO:Calculating mAP...
+2022-12-20 15:58:17,494:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_58_17.json
+2022-12-20 15:58:17,820:INFO:epoch: 312, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.520
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.828
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.578
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.645
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.531
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.411
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.267
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.586
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.607
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.719
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.604
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.529
+
+2022-12-20 15:58:17,821:INFO:update best result: 0.5195077788832889
+2022-12-20 15:58:21,448:INFO:update best checkpoint at: outputs/2022-12-20_time_14_35_45/ckpt_0/best_map.ckpt
+2022-12-20 15:58:30,915:INFO:Processing... 0.00% 
+2022-12-20 15:58:32,588:INFO:Calculating mAP...
+2022-12-20 15:58:33,032:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_58_32.json
+2022-12-20 15:58:33,845:INFO:epoch: 313, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.509
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.836
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.567
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.640
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.513
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.410
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.263
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.569
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.602
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.706
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.612
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.511
+
+2022-12-20 15:58:43,393:INFO:Processing... 0.00% 
+2022-12-20 15:58:45,047:INFO:Calculating mAP...
+2022-12-20 15:58:45,451:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_58_45.json
+2022-12-20 15:58:45,743:INFO:epoch: 314, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.504
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.831
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.548
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.618
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.518
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.393
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.259
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.564
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.608
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.688
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.631
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.497
+
+2022-12-20 15:58:57,329:INFO:Processing... 0.00% 
+2022-12-20 15:58:58,995:INFO:Calculating mAP...
+2022-12-20 15:58:59,449:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_58_59.json
+2022-12-20 15:58:59,772:INFO:epoch: 315, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.518
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.835
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.569
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.633
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.537
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.418
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.269
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.588
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.621
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.713
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.635
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.523
+
+2022-12-20 15:59:00,987:INFO:epoch[315], iter[8199], loss:89.725778, per step time: 527.16 ms, fps: 15.18, lr:7.2272628131031524e-06
+2022-12-20 15:59:08,851:INFO:Processing... 0.00% 
+2022-12-20 15:59:10,515:INFO:Calculating mAP...
+2022-12-20 15:59:10,939:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_59_10.json
+2022-12-20 15:59:11,243:INFO:epoch: 316, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.508
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.836
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.567
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.633
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.516
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.405
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.252
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.571
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.606
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.713
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.619
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.507
+
+2022-12-20 15:59:22,508:INFO:Processing... 0.00% 
+2022-12-20 15:59:24,189:INFO:Calculating mAP...
+2022-12-20 15:59:24,618:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_59_24.json
+2022-12-20 15:59:24,926:INFO:epoch: 317, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.508
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.816
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.568
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.604
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.529
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.416
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.256
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.582
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.613
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.681
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.627
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.529
+
+2022-12-20 15:59:33,719:INFO:Processing... 0.00% 
+2022-12-20 15:59:35,395:INFO:Calculating mAP...
+2022-12-20 15:59:35,816:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_59_35.json
+2022-12-20 15:59:36,120:INFO:epoch: 318, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.505
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.826
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.562
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.589
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.515
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.410
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.248
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.569
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.606
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.688
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.627
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.497
+
+2022-12-20 15:59:46,829:INFO:Processing... 0.00% 
+2022-12-20 15:59:48,502:INFO:Calculating mAP...
+2022-12-20 15:59:48,953:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_15_59_48.json
+2022-12-20 15:59:49,277:INFO:epoch: 319, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.513
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.828
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.595
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.610
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.535
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.406
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.252
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.586
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.619
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.694
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.635
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.519
+
+2022-12-20 15:59:50,916:INFO:epoch[319], iter[8299], loss:89.110972, per step time: 499.28 ms, fps: 16.02, lr:2.891462429488456e-07
+2022-12-20 16:00:00,669:INFO:Processing... 0.00% 
+2022-12-20 16:00:02,429:INFO:Calculating mAP...
+2022-12-20 16:00:02,902:INFO:result file path: outputs/2022-12-20_time_14_35_45/predict_2022_12_20_16_00_02.json
+2022-12-20 16:00:03,650:INFO:epoch: 320, mAP:
+  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.527
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.829
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.625
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.640
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.552
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.403
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.256
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.586
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.619
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.713
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.638
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.509
+
+2022-12-20 16:00:03,651:INFO:update best result: 0.526875217797105
+2022-12-20 16:00:07,127:INFO:update best checkpoint at: outputs/2022-12-20_time_14_35_45/ckpt_0/best_map.ckpt
+2022-12-20 16:00:07,135:INFO:==========end training===============
